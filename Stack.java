@@ -1,8 +1,10 @@
 /**
-* Esta clase implementa la ADT de pila con Vectores
-* @author: Mark Albrand
-* @version: 18-ene-22
-*/
+ * Esta es la clase implementa la interfaz de la pila, con vectores.
+ * @author: Mark Albrand
+ * @author: Jimena Hernández
+ * @author: Emily Pérez
+ * @version: 2-mar-22
+ */
 
 import java.util.Vector;
 

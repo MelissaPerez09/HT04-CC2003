@@ -1,8 +1,11 @@
 /**
-* Esta es la clase principal del programa
-* @author: Mark Albrand
-* @version: 18-ene-22
-*/
+ * Esta es la clase principal del programa.
+ * Contiene al método main
+ * @author: Mark Albrand
+ * @author: Jimena Hernández
+ * @author: Emily Pérez
+ * @version: 2-mar-22
+ */
 
 import java.util.ArrayList;
 

@@ -1,10 +1,12 @@
 /**
-* Interfaz para calculadora postfix
-* @author: Mark Albrand
-* @version: 18-ene-22
-*/
+ * Esta es la interfaz para una calculadora infix
+ * @author: Mark Albrand
+ * @author: Jimena Hernández
+ * @author: Emily Pérez
+ * @version: 2-mar-22
+ */
 
-public interface IPosfixCalc {
+public interface InFixCalc {
 
     /**
      * Evalua una linea con formato postfix

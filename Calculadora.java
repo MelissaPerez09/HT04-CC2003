@@ -1,10 +1,13 @@
 /**
-* Esta es la clase que implementa la interfaz de calculadora postfix
-* @author: Mark Albrand
-* @version: 18-ene-22
-*/
+ * Esta es la clase que implementa la interfaz de la calculadora Infix.
+ * Analiza una línea a la vez.
+ * @author: Mark Albrand
+ * @author: Jimena Hernández
+ * @author: Emily Pérez
+ * @version: 2-mar-22
+ */
 
-public class Calculadora implements IPosfixCalc{
+public class Calculadora implements InFixCalc {
 
     /** 
     * Evalua una linea en formato postfix

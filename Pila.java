@@ -1,8 +1,11 @@
 /**
-* Esta interfaz es para una ADT de pila
-* @author: Mark Albrand
-* @version: 18-ene-22
-*/
+ * Esta es la interfaz para una ADT de una pila.
+ * Puede crearse a base de cualquier tipo primitivo de datos.
+ * @author: Mark Albrand
+ * @author: Jimena Hernández
+ * @author: Emily Pérez
+ * @version: 2-mar-22
+ */
 
 public interface Pila<T> {
     /**

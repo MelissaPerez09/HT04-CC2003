@@ -1,23 +1,28 @@
-                                                                                                                                    /**
-* Esta es la lee archivos de texto
-* @author: Mark Albrand
-* @version: 18-ene-22
-*/
-
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Esta es la clase administra la interacción con archivos de texto.
+ * Abre y lee archivos con operaciones en formato infix
+ * @author: Mark Albrand
+ * @author: Jimena Hernández
+ * @author: Emily Pérez
+ * @version: 2-mar-22
+ */
+
+
+
 public class Archivos {
-    File archivo;
+    private File archivo;
 
     /**
      * Constructor de la clase
      * @param nombreArchivo Nombre o dirección del archivo
-     * @throws IOException Si no se logra abrir correctamente el archivo
+     * @throws IOException Si no se logra abrir correctamente el archivo, se genera una IOException
      */
-    Archivos(String nombreArchivo) throws IOException{
+    public Archivos(String nombreArchivo) throws IOException{
         archivo = new File(nombreArchivo);
         archivo.createNewFile();
         
@@ -26,7 +31,7 @@ public class Archivos {
     /**
      * Lee todas las lineas posibles de un archivo
      * @return Un ArrayList con todas las lineas leidas
-     * @throws IOException
+     * @throws IOException Si no se logra leer correctamente el archivo, se genera una IOException
      */
     public ArrayList<String> leer() throws IOException{
         ArrayList<String> cache = new ArrayList<String>();

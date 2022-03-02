@@ -1,8 +1,16 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class Tests extends Calculadora {
+/**
+ * Esta es la clase que ejecuta los JUnit tests.
+ * Prueba las funcionalidades de la calculadora y de la implementación de la pila
+ * @author: Mark Albrand
+ * @author: Jimena Hernández
+ * @author: Emily Pérez
+ * @version: 2-mar-22
+ */
+
+class CalculadoraTests {
     private Calculadora calculadora = new Calculadora();
 
     @Test
