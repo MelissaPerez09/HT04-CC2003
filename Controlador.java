@@ -1,6 +1,7 @@
 /**
  * Esta es la clase principal del programa.
  * Contiene al método main
+ * Universidad del Valle de Guatemala
  * @author: Mark Albrand
  * @author: Jimena Hernández
  * @author: Emily Pérez

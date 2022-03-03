@@ -6,6 +6,7 @@ import java.util.ArrayList;
 /**
  * Esta es la clase administra la interacción con archivos de texto.
  * Abre y lee archivos con operaciones en formato infix
+ * Universidad del Valle de Guatemala
  * @author: Mark Albrand
  * @author: Jimena Hernández
  * @author: Emily Pérez

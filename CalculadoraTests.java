@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Esta es la clase que ejecuta los JUnit tests.
+ * Universidad del Valle de Guatemala
  * Prueba las funcionalidades de la calculadora y de la implementación de la pila
  * @author: Mark Albrand
  * @author: Jimena Hernández

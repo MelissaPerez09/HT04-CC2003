@@ -1,5 +1,6 @@
 /**
  * Esta es la interfaz para una calculadora infix
+ * Universidad del Valle de Guatemala
  * @author: Mark Albrand
  * @author: Jimena Hernández
  * @author: Emily Pérez

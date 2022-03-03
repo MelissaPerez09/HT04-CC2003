@@ -1,6 +1,7 @@
 /**
  * Esta es la clase que implementa la interfaz de la calculadora Infix.
  * Analiza una línea a la vez.
+ * Universidad del Valle de Guatemala
  * @author: Mark Albrand
  * @author: Jimena Hernández
  * @author: Emily Pérez

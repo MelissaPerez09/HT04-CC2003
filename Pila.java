@@ -1,6 +1,7 @@
 /**
  * Esta es la interfaz para una ADT de una pila.
  * Puede crearse a base de cualquier tipo primitivo de datos.
+ * Universidad del Valle de Guatemala
  * @author: Mark Albrand
  * @author: Jimena Hernández
  * @author: Emily Pérez
