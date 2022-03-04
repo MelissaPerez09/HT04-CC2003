@@ -15,7 +15,8 @@ public class CalculadoraSingle extends Calculadora implements InFixCalc{
 
     public static CalculadoraSingle getInstance(){
         if(instance == null){
-            return new CalculadoraSingle();
+            instance = new CalculadoraSingle();
+            return instance;
         } 
         else{
             return instance;

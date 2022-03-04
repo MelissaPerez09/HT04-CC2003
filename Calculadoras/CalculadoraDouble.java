@@ -5,7 +5,8 @@ public class CalculadoraDouble extends Calculadora implements InFixCalc{
 
     public static CalculadoraDouble getInstance(){
         if(instance == null){
-            return new CalculadoraDouble();
+            instance = new CalculadoraDouble();
+            return instance;
         } else{
             return instance;
         }

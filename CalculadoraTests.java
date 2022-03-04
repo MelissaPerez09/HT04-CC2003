@@ -14,10 +14,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculadoraTests {
     private CalculadoraVectores calculadoraVectores = CalculadoraVectores.getInstance();
+    private CalculadoraArrayLists calculadoraArrayLists = CalculadoraArrayLists.getInstance();
+    private CalculadoraDouble calculadoraDouble = CalculadoraDouble.getInstance();
+    private CalculadoraSingle calculadoraSingle = CalculadoraSingle.getInstance();
 
     @Test
     public void testCalculadora(){
-        assertEquals(15, calculadoraVectores.Evaluate("1 2 + 4 * 3 +"));
+        String linea = Convertidor.infixToPostfix("1+2*9");
+        assertEquals(18, calculadoraVectores.Evaluate(linea));
+        assertEquals(18, calculadoraArrayLists.Evaluate(linea));
+        assertEquals(18, calculadoraDouble.Evaluate(linea));
+        assertEquals(18, calculadoraSingle.Evaluate(linea));
     }
 
     @Test
@@ -29,7 +36,6 @@ class CalculadoraTests {
         assertEquals(20, stacker.peek());
         stacker.pull();
         assertEquals(10, stacker.peek());
-
     }
 
     @Test
