@@ -15,10 +15,6 @@ import java.util.ArrayList;
 public class Controlador{
     private static Archivos archivo = null;
     private static String nombreArchivo = "ejemplo.txt";  // NOMBRE DEL ARCHIVO CON LOS OPERANDOS
-    private static CalculadoraVectores calculadoraVectores = CalculadoraVectores.getInstance();
-    private static CalculadoraDouble calculadoraDouble = CalculadoraDouble.getInstance();
-    private static CalculadoraSingle calculadoraSingle = CalculadoraSingle.getInstance();
-    private static CalculadoraArrayLists calculadoraArrays = CalculadoraArrayLists.getInstance();
     private static Convertidor convertidor = new Convertidor();
     private static Vista vista = new Vista();
 
@@ -49,7 +45,7 @@ public class Controlador{
         while(opcion != 5){
             switch(opcion) {
                 case 1: // case arraylist
-
+                    CalculadoraArrayLists calculadoraArrays = (CalculadoraArrayLists)(Factory.getCalculadora(opcion));
                     for (int i = 0; i < lineas.size(); i++) {
                         String lineaActual = lineas.get(i);
                         Integer resultado = calculadoraArrays.Evaluate(lineaActual);
@@ -61,7 +57,7 @@ public class Controlador{
                     }
                     break;
                 case 2: // case vector
-
+                    CalculadoraVectores calculadoraVectores = (CalculadoraVectores)(Factory.getCalculadora(opcion));
                     for (int i = 0; i < lineas.size(); i++) {
                         String lineaActual = lineas.get(i);
                         Integer resultado = calculadoraVectores.Evaluate(lineaActual);
@@ -74,6 +70,7 @@ public class Controlador{
 
                     break;
                 case 3: // case single Linkedlist
+                    CalculadoraSingle calculadoraSingle = (CalculadoraSingle) (Factory.getCalculadora(opcion));
                     for (int i = 0; i < lineas.size(); i++) {
                         String lineaActual = lineas.get(i);
                         Integer resultado = calculadoraSingle.Evaluate(lineaActual);
@@ -85,6 +82,7 @@ public class Controlador{
                     }
                     break;
                 case 4: // case double Linkedlist
+                    CalculadoraDouble calculadoraDouble = (CalculadoraDouble) (Factory.getCalculadora(opcion));
                     for (int i = 0; i < lineas.size(); i++) {
                         String lineaActual = lineas.get(i);
                         Integer resultado = calculadoraDouble.Evaluate(lineaActual);
