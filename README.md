@@ -13,7 +13,7 @@ Emily Pérez/21385
 ## Índice
 
 1. [Pruebas JUnit ](https://github.com/markalbrand56/AED-Hoja-de-trabajo-4/blob/main/media/Pruebas%20JUnit.jpg)
-2. [UML]()
+2. [UML](https://github.com/markalbrand56/AED-Hoja-de-trabajo-4/blob/main/media/HDT4%20UML.drawio.png)
 
 ## Ventajas y desventajas del patrón Singleton
 
