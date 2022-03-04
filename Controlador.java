@@ -21,11 +21,8 @@ public class Controlador{
     private static String nombreArchivo = "ejemplo.txt";  // NOMBRE DEL ARCHIVO CON LOS OPERANDOS
     private static CalculadoraVectores calculadoraVectores = CalculadoraVectores.getInstance();
     private static CalculadoraDouble calculadoraDouble = CalculadoraDouble.getInstance();
-<<<<<<< HEAD
     private static CalculadoraSingle calculadoraSingle = CalculadoraSingle.getInstance();
-=======
     private static CalculadoraArrayLists calculadoraArrays = CalculadoraArrayLists.getInstance();
->>>>>>> ddd31d833d750a090478a673cbbc1f3ee13a64ea
     private static Convertidor convertidor = new Convertidor();
     private static Vista vista = new Vista();
 
