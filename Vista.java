@@ -12,10 +12,10 @@ public class Vista {
     public int menu(){
         int opcion;
         mensaje("\n" +"¿Qué calculadora desea usar?");
-        System.out.println("1. Arralist");
+        System.out.println("1. Arraylist");
         System.out.println("2. Vector");
-        System.out.println("3. Double Linkedlist");
-        System.out.println("4. Single Linkedlist");
+        System.out.println("3. Single Linkedlist");
+        System.out.println("4. Double Linkedlist");
         System.out.println("5. Salir");
 
         System.out.print("Seleccion: ");
