@@ -14,6 +14,10 @@ public class SingleLinkedList<T> implements IList<T> {
     private Node<T> start;
     private Node<T> end;
 
+    /**
+     *
+     * @param value
+     */
 	@Override
 	public void InsertAtStart(T value) {
 		Node<T> newNode = new Node<T>(value);
@@ -29,6 +33,10 @@ public class SingleLinkedList<T> implements IList<T> {
         count++;
 	}
 
+    /**
+     *
+     * @param value
+     */
 	@Override
 	public void InsertAtEnd(T value) {
 		Node<T> newNode = new Node<T>(value);
@@ -44,6 +52,11 @@ public class SingleLinkedList<T> implements IList<T> {
         count++;
 	}
 
+    /**
+     *
+     * @param value
+     * @param index
+     */
 	@Override
 	public void Insert(T value, int index){
 		//if the list is empty then insert at start
@@ -81,6 +94,11 @@ public class SingleLinkedList<T> implements IList<T> {
         }
 	}
 
+    /**
+     *
+     * @param index
+     * @return
+     */
 	@Override
 	public T Delete(int index) {
 		
@@ -112,6 +130,10 @@ public class SingleLinkedList<T> implements IList<T> {
         }
 	}
 
+    /**
+     *
+     * @return
+     */
 	@Override
 	public T DeleteAtStart() {
 		
@@ -124,6 +146,10 @@ public class SingleLinkedList<T> implements IList<T> {
         return null;
 	}
 
+    /**
+     *
+     * @return
+     */
 	@Override
 	public T DeleteAtEnd() {
 		if (!IsEmpty()) {
@@ -155,6 +181,11 @@ public class SingleLinkedList<T> implements IList<T> {
         return null;
 	}
 
+    /**
+     *
+     * @param index
+     * @return
+     */
 	@Override
 	public T Get(int index) {
 		
@@ -187,11 +218,19 @@ public class SingleLinkedList<T> implements IList<T> {
         return null;
 	}
 
+    /**
+     *
+     * @return
+     */
 	@Override
 	public boolean IsEmpty() {
 		return count == 0;
 	}
 
+    /**
+     *
+     * @return
+     */
 	@Override
 	public int Count() {
 		return count;

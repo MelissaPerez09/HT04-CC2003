@@ -4,8 +4,8 @@ public class Factory {
 
 
     /**
-     * @param option El tipo de estructura de datos a utilizar con la pila
-     * @return La pila implementada con la estructura seleccionada
+     * @param option El tipo de estructura de datos a utilizar con la Calculadora
+     * @return La calculadora elegida.
      */
     public static Calculadora getCalculadora(int option) {
         switch (option) {

@@ -6,13 +6,18 @@ public class DoubleLinkedList<T> implements IList<T>{
         private DoubleNode<T> end;
         private int count;
 
+
         public DoubleLinkedList() {
             start = null;
             end = null;
             count = 0;
         }
 
-        @Override
+    /**
+     *
+     * @param value
+     */
+    @Override
         public void InsertAtStart(T value) {
             DoubleNode<T> newNode = new DoubleNode<T>(value);
 
@@ -34,7 +39,11 @@ public class DoubleLinkedList<T> implements IList<T>{
             count++;
         }
 
-        @Override
+    /**
+     *
+     * @param value
+     */
+    @Override
         public void InsertAtEnd(T value) {
 
             DoubleNode<T> newNode = new DoubleNode<T>(value);
@@ -58,7 +67,12 @@ public class DoubleLinkedList<T> implements IList<T>{
 
         }
 
-        @Override
+    /**
+     *
+     * @param value
+     * @param index
+     */
+    @Override
         public void Insert(T value, int index) {
 
             if (IsEmpty()) //if the list is empty then insert at start
@@ -98,13 +112,22 @@ public class DoubleLinkedList<T> implements IList<T>{
 
         }
 
-        @Override
+    /**
+     *
+     * @param index
+     * @return
+     */
+    @Override
         public T Delete(int index) {
             // TODO Auto-generated method stub
             return null;
         }
 
-        @Override
+    /**
+     *
+     * @return
+     */
+    @Override
         public T DeleteAtStart() {
             if (!IsEmpty()) {
 
@@ -130,13 +153,22 @@ public class DoubleLinkedList<T> implements IList<T>{
 
         }
 
-        @Override
+    /**
+     *
+     * @return
+     */
+    @Override
         public T DeleteAtEnd() {
             // TODO Auto-generated method stub
             return null;
         }
 
-        @Override
+    /**
+     *
+     * @param index
+     * @return
+     */
+    @Override
         public T Get(int index) {
             if (!IsEmpty())
             {
@@ -177,12 +209,20 @@ public class DoubleLinkedList<T> implements IList<T>{
 
         }
 
-        @Override
+    /**
+     *
+     * @return
+     */
+    @Override
         public boolean IsEmpty() {
             return count == 0;
         }
 
-        @Override
+    /**
+     *
+     * @return
+     */
+    @Override
         public int Count() {
             return count;
         }
