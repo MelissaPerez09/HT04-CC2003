@@ -41,6 +41,13 @@ public class Controlador{
         } catch (Exception e) {
             vista.mensaje("No se pudo abrir el archivo");
         }
+
+        for (int i = 0; i < lineas.size(); i++) {
+            String lineaActual = lineas.get(i);
+            String lineaPostFix = Convertidor.infixToPostfix(lineaActual);
+            lineas.set(i, lineaPostFix);
+        }
+        
         int opcion;
         opcion = vista.menu(); //se llama la opcion
         while(opcion != 5){
