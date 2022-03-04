@@ -1,6 +1,6 @@
 package Calculadoras;
 /**
- * Esta es la clase que implementa la interfaz de la calculadora Infix.
+ * Esta es la clase que implementa la interfaz de la calculadora Infix con vectores.
  * Analiza una línea a la vez.
  * Universidad del Valle de Guatemala
  * @author Mark Albrand
@@ -16,6 +16,10 @@ public class CalculadoraVectores extends Calculadora implements InFixCalc {
 
     }
 
+    /**
+     * Regresa la instancia para aplicar singleton
+     * @return Instancia deseada
+     */
     public static CalculadoraVectores getInstance(){
         if(instance == null){
             instance = new CalculadoraVectores();

@@ -1,7 +1,7 @@
 package Calculadoras;
 
 /**
- * Esta es la clase que implementa la interfaz de la calculadora Infix.
+ * Esta es la clase que implementa la interfaz de la calculadora Infix con Listas simples encadenadas.
  * Analiza una línea a la vez.
  * Universidad del Valle de Guatemala
  * @author Mark Albrand
@@ -13,6 +13,10 @@ package Calculadoras;
 public class CalculadoraSingle extends Calculadora implements InFixCalc{
     private static CalculadoraSingle instance;
 
+    /**
+     * Regresa la instancia para aplicar singleton
+     * @return Instancia deseada
+     */
     public static CalculadoraSingle getInstance(){
         if(instance == null){
             instance = new CalculadoraSingle();
@@ -23,12 +27,12 @@ public class CalculadoraSingle extends Calculadora implements InFixCalc{
         }
     }
 
-    @Override
     /**
      * Evaluate una linea en formato infix
      * @param expression Linea en formato postfix
      * @return Resultado
      */
+    @Override
     public int Evaluate(String expression) {
         String[] lineaActual = expression.split(" ");
         SingleLinkedList<Integer> calculadora = new SingleLinkedList<>();

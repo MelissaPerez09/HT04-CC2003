@@ -1,7 +1,7 @@
 package Calculadoras;
 
 /**
- * Esta es la clase que implementa la interfaz de la calculadora Infix.
+ * Esta es la clase que implementa la interfaz de la calculadora Infix con ArrayLists.
  * Analiza una línea a la vez.
  * Universidad del Valle de Guatemala
  * @author Mark Albrand
@@ -13,8 +13,10 @@ package Calculadoras;
 public class CalculadoraArrayLists extends Calculadora implements InFixCalc {
     private static CalculadoraArrayLists instance;
 
-    private CalculadoraArrayLists(){};
-
+    /**
+     * Regresa la instancia para aplicar singleton
+     * @return Instancia deseada
+     */
     public static CalculadoraArrayLists getInstance(){
         if(instance == null){
             instance = new CalculadoraArrayLists();

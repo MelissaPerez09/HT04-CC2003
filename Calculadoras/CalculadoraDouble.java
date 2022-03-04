@@ -1,8 +1,22 @@
 package Calculadoras;
 
+/**
+ * Esta es la clase que implementa la interfaz de la calculadora Infix con Listas de doble encadenamiento.
+ * Analiza una línea a la vez.
+ * Universidad del Valle de Guatemala
+ * @author Mark Albrand
+ * @author Jimena Hernández
+ * @author Emily Pérez
+ * @version 2-mar-22
+ */
+
 public class CalculadoraDouble extends Calculadora implements InFixCalc{
     private static CalculadoraDouble instance;
 
+    /**
+     * Regresa la instancia para aplicar singleton
+     * @return Instancia deseada
+     */
     public static CalculadoraDouble getInstance(){
         if(instance == null){
             instance = new CalculadoraDouble();
