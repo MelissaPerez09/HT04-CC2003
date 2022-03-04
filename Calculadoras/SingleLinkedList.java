@@ -4,8 +4,8 @@ package Calculadoras;
  * Esta es la clase implementa la interfaz de la lista
  * Universidad del Valle de Guatemala
  * @author Mark Albrand
- * @author Jimena Hernández
- * @author Emily Pérez
+ * @author Jimena Hernandez
+ * @author Emily Perez
  * @version 2-mar-22
  */
 
@@ -18,13 +18,11 @@ public class SingleLinkedList<T> implements IList<T> {
 	public void InsertAtStart(T value) {
 		Node<T> newNode = new Node<T>(value);
 
-        if (IsEmpty())
-        {
+        if (IsEmpty()){
             start = newNode;
             end = newNode;
         }
-        else
-        {
+        else{
             newNode.setNext(start);
             start = newNode;
         }
@@ -35,8 +33,7 @@ public class SingleLinkedList<T> implements IList<T> {
 	public void InsertAtEnd(T value) {
 		Node<T> newNode = new Node<T>(value);
 
-        if (IsEmpty())
-        {
+        if (IsEmpty()){
             start = newNode;
             end = newNode;
         }
@@ -44,30 +41,26 @@ public class SingleLinkedList<T> implements IList<T> {
             end.setNext(newNode);
             end = newNode;
         }
-
         count++;
-		
 	}
 
 	@Override
 	public void Insert(T value, int index){
-		
-		if (IsEmpty()) //if the list is empty then insert at start
-        {
+		//if the list is empty then insert at start
+		if (IsEmpty()) {
             InsertAtStart(value);
         }
-        else 
-        {
-            if (index >= Count()) //if the index is equal or greater than count then insert at end
-            {
+        else {
+            //if the index is equal or greater than count then insert at end
+            if (index >= Count()) {
                 InsertAtEnd(value);
             } 
-            else if (index == 0) //If the index to insert is 0 and the list is not empty
-            {
+            //If the index to insert is 0 and the list is not empty
+            else if (index == 0) {
                 InsertAtStart(value);
             }
-            else if ((index > 0) && (index < Count())) //Index between 1 (second element) and Count() - 1 previous the last one
-            {
+            //Index between 1 (second element) and Count() - 1 previous the last one
+            else if ((index > 0) && (index < Count())){
                 Node<T> newNode = new Node<T>(value);
                 Node<T> pretemp = start;
                 Node<T> temp = start.getNext();
@@ -91,23 +84,19 @@ public class SingleLinkedList<T> implements IList<T> {
 	@Override
 	public T Delete(int index) {
 		
-		if (index == 0)
-        {
+		if (index == 0){
             return DeleteAtStart();
         }
-        else if (index == (Count() - 1))
-        {
+        else if (index == (Count() - 1)){
             return DeleteAtEnd();
         }
-        else if ((index > 0) && (index < (Count() - 1)))
-        {
+        else if ((index > 0) && (index < (Count() - 1))){
             Node<T> pretemp = start;
             Node<T> temp = start.getNext();
             int i = 1;
 
             //Search the position where the node will be inserted
-            while ((temp != null) && (i < (Count() - 1)))
-            {
+            while ((temp != null) && (i < (Count() - 1))){
                 pretemp = temp;
                 temp = temp.getNext();
                 i++;
@@ -118,8 +107,7 @@ public class SingleLinkedList<T> implements IList<T> {
             count--;
             return temp.getValue();
         }
-        else
-        {
+        else{
             return null;
         }
 	}
@@ -127,92 +115,75 @@ public class SingleLinkedList<T> implements IList<T> {
 	@Override
 	public T DeleteAtStart() {
 		
-		if (!IsEmpty()) 
-        {
+		if (!IsEmpty()) {
             Node<T> temp = start;
             start = start.getNext();
             count--;
             return temp.getValue();
         }
-
         return null;
 	}
 
 	@Override
 	public T DeleteAtEnd() {
-		if (!IsEmpty()) 
-        {
+		if (!IsEmpty()) {
 
-            if (Count() == 1) //Only one node then delete
-            {
+            //Only one node then delete
+            if (Count() == 1) {
                 Node<T> temp = start;
                 start = null;
                 end = null;
                 count--;
                 return temp.getValue();
             }
-            else
-            {
+            else{
                 Node<T> pretemp = start;
                 Node<T> temp = start.getNext();
 
                 //Search the position where the node will be inserted
-                while (temp != null)
-                {
+                while (temp != null){
                     pretemp = temp;
                     temp = temp.getNext();
                 }
-
                 //Delete the node
                 end = pretemp;
                 end.setNext(null);
                 count--;
                 return temp.getValue();
             }
-
         }
-
         return null;
 	}
 
 	@Override
 	public T Get(int index) {
 		
-	    if (!IsEmpty())
-        {
-            if (index == 0)
-            {
+	    if (!IsEmpty()){
+            if (index == 0){
                 return start.getValue();
             }
-            else if (index == (Count() - 1))
-            {
+            else if (index == (Count() - 1)){
                 return end.getValue();
             }
-            else if ((index > 0) && (index < (Count() - 1)))
-            {
+            else if ((index > 0) && (index < (Count() - 1))){
                 Node<T> temp = start;
                 int i = 0;
-                while ((temp != null) && (i != index))
-                {
+                while ((temp != null) && (i != index)){
                     temp = temp.getNext();
                     i++;
                 }
 
-                if (temp != null)
-                {
+                if (temp != null){
                     return temp.getValue();
                 }
-                else
-                {
+                else{
                     return null;
                 }
             }
-            else
-            {
+            else{
                 return null;
             }
         }
-
         return null;
 	}
 
@@ -223,7 +194,6 @@ public class SingleLinkedList<T> implements IList<T> {
 
 	@Override
 	public int Count() {
-		// TODO Auto-generated method stub
 		return count;
 	}
 }
