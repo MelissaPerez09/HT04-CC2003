@@ -23,6 +23,6 @@ podemos mencionar como desventaja: La gran responsabilidad
 de este patrón que a la vez viola el "principio de responsabilidad única".
 Por otro lado, creemos como grupo que este patrón 
 en este programa no era del todo esencial pero tuvo más ventajas que desventajas
- debido a que nos permitió tener acceso controlado a la instancia única.
+debido a que nos permitió tener acceso controlado a la instancia única.
 ```
 
