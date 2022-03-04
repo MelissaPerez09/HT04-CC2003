@@ -18,7 +18,8 @@ public class CalculadoraVectores implements InFixCalc {
 
     public static CalculadoraVectores getInstance(){
         if(instance == null){
-            return new CalculadoraVectores();
+            instance = new CalculadoraVectores();
+            return instance;
         } else{
             return instance;
         }
