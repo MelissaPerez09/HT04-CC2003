@@ -11,6 +11,19 @@ package Calculadoras;
  */
 
 public class CalculadoraArrayLists implements InFixCalc {
+    private static CalculadoraArrayLists instance;
+
+    private CalculadoraArrayLists(){};
+
+    public CalculadoraArrayLists getInstance(){
+        if(instance == null){
+            instance = new CalculadoraArrayLists();
+            return instance;
+        }else {
+            return instance;
+        }
+    }
+
     /**
      * Evaluate una linea en formato infix
      * @param expression Linea en formato postfix
