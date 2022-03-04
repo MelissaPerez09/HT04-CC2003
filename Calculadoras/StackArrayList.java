@@ -1,8 +1,16 @@
 package Calculadoras;
 
 import java.util.ArrayList;
-import java.util.Vector;
 
+/**
+ * Esta es la clase que implementa un Stack utilizando ArrayLists.
+ * Universidad del Valle de Guatemala
+ * @author Mark Albrand
+ * @author Jimena Hernández
+ * @author Emily Pérez
+ * @version 2-mar-22
+ * @param <T> Tipo a utilizar para el ArrayList
+ */
 public class StackArrayList<T> implements Pila<T> {
     private ArrayList<T> cache;
 
