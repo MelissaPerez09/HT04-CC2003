@@ -1,10 +1,12 @@
+package Calculadoras;
+
 /**
  * Esta es la clase implementa la interfaz de la pila, con vectores.
  * Universidad del Valle de Guatemala
- * @author: Mark Albrand
- * @author: Jimena Hernández
- * @author: Emily Pérez
- * @version: 2-mar-22
+ * @author Mark Albrand
+ * @author Jimena Hernández
+ * @author Emily Pérez
+ * @version 2-mar-22
  */
 
 import java.util.Vector;

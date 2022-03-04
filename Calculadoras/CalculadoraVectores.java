@@ -1,14 +1,15 @@
+package Calculadoras;
 /**
  * Esta es la clase que implementa la interfaz de la calculadora Infix.
  * Analiza una línea a la vez.
  * Universidad del Valle de Guatemala
- * @author: Mark Albrand
- * @author: Jimena Hernández
- * @author: Emily Pérez
- * @version: 2-mar-22
+ * @author Mark Albrand
+ * @author Jimena Hernández
+ * @author Emily Pérez
+ * @version 2-mar-22
  */
 
-public class Calculadora implements InFixCalc {
+public class CalculadoraVectores implements InFixCalc {
 
     /** 
     * Evalua una linea en formato postfix

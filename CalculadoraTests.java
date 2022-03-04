@@ -1,3 +1,5 @@
+import Calculadoras.CalculadoraVectores;
+import Calculadoras.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,11 +14,11 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 class CalculadoraTests {
-    private Calculadora calculadora = new Calculadora();
+    private CalculadoraVectores calculadoraVectores = new CalculadoraVectores();
 
     @Test
     public void testCalculadora(){
-        assertEquals(15, calculadora.Evaluate("1 2 + 4 * 3 +"));
+        assertEquals(15, calculadoraVectores.Evaluate("1 2 + 4 * 3 +"));
     }
 
     @Test

@@ -8,12 +8,14 @@
  * @version: 2-mar-22
  */
 
+import Calculadoras.CalculadoraVectores;
+
 import java.util.ArrayList;
 
 public class Controlador{
     private static Archivos archivo = null;
     private static String nombreArchivo = "ejemplo.txt";  // NOMBRE DEL ARCHIVO CON LOS OPERANDOS
-    private static Calculadora calculadora = new Calculadora();
+    private static CalculadoraVectores calculadoraVectores = new CalculadoraVectores();
 
     /**
      * Función main del programa
@@ -32,7 +34,7 @@ public class Controlador{
 
         for (int i = 0; i < lineas.size(); i++) {
             String lineaActual = lineas.get(i);
-            Integer resultado = calculadora.Evaluate(lineaActual);
+            Integer resultado = calculadoraVectores.Evaluate(lineaActual);
             if (resultado != -1) {
                 print("Resultado " + (i+1) + ": " + resultado.toString());
             }else{
