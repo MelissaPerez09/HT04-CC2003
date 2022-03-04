@@ -10,9 +10,22 @@ package Calculadoras;
  */
 
 public class CalculadoraVectores implements InFixCalc {
+    private static CalculadoraVectores instance;
 
-    /** 
-    * Evalua una linea en formato postfix
+    private CalculadoraVectores() {
+
+    }
+
+    public static CalculadoraVectores getInstance(){
+        if(instance == null){
+            return new CalculadoraVectores();
+        } else{
+            return instance;
+        }
+    }
+
+    /**
+    * Evaluate una linea en formato infix
     * @param expression Linea en formato postfix
     * @return Resultado
     */

@@ -1,6 +1,6 @@
 package Calculadoras;
 /**
- * Esta es la clase implementa la interfaz de la pila, con vectores.
+ * Esta es la interfaz para implementarse en cada una de las listas
  * Universidad del Valle de Guatemala
  * @author Mark Albrand
  * @author Jimena Hernández

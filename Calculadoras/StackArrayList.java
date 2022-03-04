@@ -1,25 +1,24 @@
 package Calculadoras;
-import java.util.Vector;
+
+import java.util.ArrayList;
 
 /**
- * Esta es la clase implementa la interfaz de la pila, con vectores.
+ * Esta es la clase que implementa un Stack utilizando ArrayLists.
  * Universidad del Valle de Guatemala
  * @author Mark Albrand
  * @author Jimena Hernández
  * @author Emily Pérez
  * @version 2-mar-22
+ * @param <T> Tipo a utilizar para el ArrayList
  */
-
-
-
-public class StackVector<T> implements Pila<T> {
-    private Vector<T> cache;
+public class StackArrayList<T> implements Pila<T> {
+    private ArrayList<T> cache;
 
     /**
      * Constructor de la clase
      */
-    public StackVector(){
-        cache = new Vector<T>();  // Tamaño inicial: 10        
+    public StackArrayList(){
+        cache = new ArrayList<T>();  // Tamaño inicial: 10
     }
 
     /**
@@ -37,7 +36,7 @@ public class StackVector<T> implements Pila<T> {
     @Override
     public T pull(){
         T element = cache.get(cache.size()-1);
-        cache.removeElementAt(cache.size()-1);
+        cache.remove(cache.size()-1);
         return element;
     }
 
@@ -51,20 +50,18 @@ public class StackVector<T> implements Pila<T> {
 
     /**
      * Regresa el último elemento añadido a la pila
-     * @return
+     * @return Devuelve el último elemento añadido
      */
     public T peek(){
         return cache.get(cache.size() - 1);
     }
 
     /**
-     * Regresa si el cache está vació
-     * @return
+     * Regresa si el caché está vació
+     * @return Si el ArrayList está vacío
      */
     public boolean isEmpty(){
         return cache.isEmpty();
     }
 
-
-    
 }
