@@ -10,7 +10,7 @@ package Calculadoras;
  * @version 2-mar-22
  */
 
-public class CalculadoraArrayLists implements InFixCalc {
+public class CalculadoraArrayLists extends Calculadora implements InFixCalc {
     private static CalculadoraArrayLists instance;
 
     private CalculadoraArrayLists(){};

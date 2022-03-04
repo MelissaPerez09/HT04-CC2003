@@ -10,7 +10,7 @@ package Calculadoras;
  * @version 2-mar-22
  */
 
-public class CalculadoraSingle implements InFixCalc{
+public class CalculadoraSingle extends Calculadora implements InFixCalc{
     private static CalculadoraSingle instance;
 
     public static CalculadoraSingle getInstance(){

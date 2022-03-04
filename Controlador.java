@@ -8,11 +8,7 @@
  * @version: 2-mar-22
  */
 
-import Calculadoras.CalculadoraArrayLists;
-import Calculadoras.CalculadoraDouble;
-import Calculadoras.CalculadoraVectores;
-import Calculadoras.DoubleLinkedList;
-import Calculadoras.CalculadoraSingle;
+import Calculadoras.*;
 
 import java.util.ArrayList;
 

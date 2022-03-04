@@ -1,6 +1,6 @@
 package Calculadoras;
 
-public class CalculadoraDouble implements InFixCalc{
+public class CalculadoraDouble extends Calculadora implements InFixCalc{
     private static CalculadoraDouble instance;
 
     public static CalculadoraDouble getInstance(){

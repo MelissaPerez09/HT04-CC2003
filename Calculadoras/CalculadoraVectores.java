@@ -9,7 +9,7 @@ package Calculadoras;
  * @version 2-mar-22
  */
 
-public class CalculadoraVectores implements InFixCalc {
+public class CalculadoraVectores extends Calculadora implements InFixCalc {
     private static CalculadoraVectores instance;
 
     private CalculadoraVectores() {
