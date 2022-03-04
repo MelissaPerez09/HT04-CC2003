@@ -1,9 +1,13 @@
 #Algoritmos y Estructuras de Datos
+
 ##HDT4/Grupo No.5
 ****
 ###Integrantes: 
+
 ####Mark Albrand/21004
+
 ####Jimena Hernández/21199
+
 ####Emily Pérez/21385
 
 ##Índice
@@ -12,6 +16,7 @@
 2. [UML]()
 
 ##Ventajas y desventajas del patrón Singleton
+
 ```diff
 Al analizar las ventajas y desventajas del patrón Singleton podemos mencionar como desventaja: La gran responsabilidad
 de este patrón que a la vez viola el "principio de responsabilidad única". Por otro lado, creemos como grupo que este patrón 
