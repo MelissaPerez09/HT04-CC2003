@@ -38,7 +38,7 @@ public class Convertidor {
              
             //evalua si es un numero para operarlo
             if (Character.isLetterOrDigit(c)){
-                result += c;
+                result += c + " ";
             }
             //evalua si el caracter es '(' para ponerlo en el stack
             else if (c == '('){
@@ -48,7 +48,7 @@ public class Convertidor {
             //evalua si el caracter es ')' para ponerlo en el stack
             else if (c == ')'){
                 while (!stack.isEmpty() && stack.peek() != '('){
-                    result += stack.pop();
+                    result += stack.pop() + " ";
                     stack.pop();
                 }
             }
@@ -56,7 +56,7 @@ public class Convertidor {
             //encuentra el operador
             else {
                 while (!stack.isEmpty() && preceed(c) <= preceed(stack.peek())){
-                    result += stack.pop();
+                    result += stack.pop() + " ";
                 }
                 stack.push(c);
             }
@@ -67,8 +67,8 @@ public class Convertidor {
             if(stack.peek() == '('){
                 return "Invalid Expression";
             }
-            result += stack.pop();
+            result += stack.pop() + " ";
         }
-        return result;
+        return result.trim();
     }
 }
