@@ -1,5 +1,4 @@
-import Calculadoras.CalculadoraVectores;
-import Calculadoras.StackVector;
+import Calculadoras.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,5 +30,10 @@ class CalculadoraTests {
         stacker.pull();
         assertEquals(10, stacker.peek());
 
+    }
+
+    @Test
+    public void testConvertidor(){
+        assertEquals("1 2 9 * +", Convertidor.infixToPostfix("1+2*9"));
     }
 }
