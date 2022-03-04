@@ -15,7 +15,7 @@ public class CalculadoraArrayLists implements InFixCalc {
 
     private CalculadoraArrayLists(){};
 
-    public CalculadoraArrayLists getInstance(){
+    public static CalculadoraArrayLists getInstance(){
         if(instance == null){
             instance = new CalculadoraArrayLists();
             return instance;

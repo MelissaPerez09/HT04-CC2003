@@ -8,6 +8,7 @@
  * @version: 2-mar-22
  */
 
+import Calculadoras.CalculadoraArrayLists;
 import Calculadoras.CalculadoraDouble;
 import Calculadoras.CalculadoraVectores;
 import Calculadoras.DoubleLinkedList;
@@ -20,7 +21,11 @@ public class Controlador{
     private static String nombreArchivo = "ejemplo.txt";  // NOMBRE DEL ARCHIVO CON LOS OPERANDOS
     private static CalculadoraVectores calculadoraVectores = CalculadoraVectores.getInstance();
     private static CalculadoraDouble calculadoraDouble = CalculadoraDouble.getInstance();
+<<<<<<< HEAD
     private static CalculadoraSingle calculadoraSingle = CalculadoraSingle.getInstance();
+=======
+    private static CalculadoraArrayLists calculadoraArrays = CalculadoraArrayLists.getInstance();
+>>>>>>> ddd31d833d750a090478a673cbbc1f3ee13a64ea
     private static Convertidor convertidor = new Convertidor();
     private static Vista vista = new Vista();
 
@@ -44,6 +49,16 @@ public class Controlador{
         while(opcion != 5){
             switch(opcion) {
                 case 1: // case arraylist
+
+                    for (int i = 0; i < lineas.size(); i++) {
+                        String lineaActual = lineas.get(i);
+                        Integer resultado = calculadoraArrays.Evaluate(lineaActual);
+                        if (resultado != -1) {
+                            vista.mensaje("Resultado " + (i+1) + ": " + resultado.toString());
+                        }else{
+                            vista.mensaje("No se reconoció la operación");
+                        }
+                    }
                     break;
                 case 2: // case vector
 
