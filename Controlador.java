@@ -19,12 +19,16 @@ public class Controlador{
     private static String nombreArchivo = "ejemplo.txt";  // NOMBRE DEL ARCHIVO CON LOS OPERANDOS
     private static CalculadoraVectores calculadoraVectores = CalculadoraVectores.getInstance();
     private static CalculadoraDouble calculadoraDouble = CalculadoraDouble.getInstance();
+    private static Convertidor convertidor = new Convertidor();
+
     /**
      * Función main del programa
      * @param args argumentos de la línea de comando
      */
     public static void main(String[] args) {
-    int opcion;
+        System.out.println(Convertidor.infixToPostfix ("1+1*(1^1-1)^(1+1*1)-1"));
+
+        int opcion;
         
         ArrayList<String> lineas = null;
         
