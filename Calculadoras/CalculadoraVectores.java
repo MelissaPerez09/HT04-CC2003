@@ -12,7 +12,7 @@ package Calculadoras;
 public class CalculadoraVectores implements InFixCalc {
 
     /** 
-    * Evalua una linea en formato postfix
+    * Evaluate una linea en formato infix
     * @param expression Linea en formato postfix
     * @return Resultado
     */
