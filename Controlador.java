@@ -1,10 +1,10 @@
 /**
  * Esta es la clase principal del programa.
- * Contiene al método main
+ * Contiene al metodo main
  * Universidad del Valle de Guatemala
  * @author: Mark Albrand
- * @author: Jimena Hernández
- * @author: Emily Pérez
+ * @author: Jimena Hernandez
+ * @author: Emily Perez
  * @version: 2-mar-22
  */
 
@@ -12,6 +12,7 @@ import Calculadoras.CalculadoraArrayLists;
 import Calculadoras.CalculadoraDouble;
 import Calculadoras.CalculadoraVectores;
 import Calculadoras.DoubleLinkedList;
+import Calculadoras.CalculadoraSingle;
 
 import java.util.ArrayList;
 
@@ -20,13 +21,14 @@ public class Controlador{
     private static String nombreArchivo = "ejemplo.txt";  // NOMBRE DEL ARCHIVO CON LOS OPERANDOS
     private static CalculadoraVectores calculadoraVectores = CalculadoraVectores.getInstance();
     private static CalculadoraDouble calculadoraDouble = CalculadoraDouble.getInstance();
+    private static CalculadoraSingle calculadoraSingle = CalculadoraSingle.getInstance();
     private static CalculadoraArrayLists calculadoraArrays = CalculadoraArrayLists.getInstance();
     private static Convertidor convertidor = new Convertidor();
     private static Vista vista = new Vista();
 
     /**
-     * Función main del programa
-     * @param args argumentos de la línea de comando
+     * Funcion main del programa
+     * @param args argumentos de la linea de comando
      */
     public static void main(String[] args) {
         //System.out.println(Convertidor.infixToPostfix ("((3+4)*2)/7"));
@@ -40,7 +42,7 @@ public class Controlador{
             vista.mensaje("No se pudo abrir el archivo");
         }
         int opcion;
-        opcion = vista.menu(); //se llama la opción
+        opcion = vista.menu(); //se llama la opcion
         while(opcion != 5){
             switch(opcion) {
                 case 1: // case arraylist
@@ -63,21 +65,30 @@ public class Controlador{
                         if (resultado != -1) {
                             vista.mensaje("Resultado " + (i+1) + ": " + resultado.toString());
                         }else{
-                            vista.mensaje("No se reconoció la operación");
+                            vista.mensaje("No se reconocio la operacion");
                         }
                     }
 
                     break;
                 case 3: // case single Linkedlist
+                    for (int i = 0; i < lineas.size(); i++) {
+                        String lineaActual = lineas.get(i);
+                        Integer resultado = calculadoraSingle.Evaluate(lineaActual);
+                        if (resultado != -1) {
+                            vista.mensaje("Resultado " + (i+1) + ": " + resultado.toString());
+                        }else{
+                            vista.mensaje("No se reconocio la operacion");
+                        }
+                    }
                     break;
                 case 4: // case double Linkedlist
                     for (int i = 0; i < lineas.size(); i++) {
                         String lineaActual = lineas.get(i);
-                        Integer resultado = calculadoraVectores.Evaluate(lineaActual);
+                        Integer resultado = calculadoraDouble.Evaluate(lineaActual);
                         if (resultado != -1) {
                             vista.mensaje("Resultado " + (i+1) + ": " + resultado.toString());
                         }else{
-                            vista.mensaje("No se reconoció la operación");
+                            vista.mensaje("No se reconocio la operacion");
                         }
                     }
 
@@ -88,8 +99,8 @@ public class Controlador{
                     System.exit(0);
                     break;
 
-                //Se le avisa al usuario que no esta ingresando una opción correcta
-                default: vista.mensaje("-Opcion invalida, porfavor ingrese una opción valida-");   break;
+                //Se le avisa al usuario que no esta ingresando una opcion correcta
+                default: vista.mensaje("-Opcion invalida, porfavor ingrese una opcion valida-");   break;
 
             }
             opcion = vista.menu();
