@@ -1,5 +1,5 @@
 import Calculadoras.CalculadoraVectores;
-import Calculadoras.Stack;
+import Calculadoras.StackVector;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,7 +23,7 @@ class CalculadoraTests {
 
     @Test
     public void testStack(){
-        Stack<Integer> stacker = new Stack<Integer>();
+        StackVector<Integer> stacker = new StackVector<Integer>();
         stacker.push(10);
         stacker.push(20);
 

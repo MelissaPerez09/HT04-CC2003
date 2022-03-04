@@ -11,13 +11,13 @@ package Calculadoras;
 
 import java.util.Vector;
 
-public class Stack<T> implements Pila<T> {
+public class StackVector<T> implements Pila<T> {
     private Vector<T> cache;
 
     /**
      * Constructor de la clase
      */
-    public Stack(){
+    public StackVector(){
         cache = new Vector<T>();  // Tamaño inicial: 10        
     }
 

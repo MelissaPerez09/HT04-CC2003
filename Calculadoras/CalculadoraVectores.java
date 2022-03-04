@@ -19,7 +19,7 @@ public class CalculadoraVectores implements InFixCalc {
     public int Evaluate(String expression){
 
         String[] lineaActual = expression.split(" ");        
-        Stack<Integer> calculadora = new Stack<Integer>();
+        StackVector<Integer> calculadora = new StackVector<Integer>();
 
             Integer resultado = 0;
             for (int j = 0; j < lineaActual.length; j++) {
